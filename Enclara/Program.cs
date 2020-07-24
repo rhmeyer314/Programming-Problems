@@ -14,7 +14,7 @@ class Program
 class Solution
 
 {
-    // this method takes in a string and returns a count of of many palindrome words were in this string
+    // This method takes in a string and returns a count of how many palindrome words were in this string
     public int NumberOfPalindromes(string paragragh)
     {
         if (paragragh == null) return 0;
@@ -30,7 +30,7 @@ class Solution
         return count;
     }
 
-    // this method takes in a string and returns a count how many sentences are palindromes
+    // This method takes in a string and returns a count of how many sentences are a palindrome
     public int NumberOfPalindromeSentences(string paragragh)
     {
         if (string.IsNullOrEmpty(paragragh)) return 0;
@@ -53,7 +53,7 @@ class Solution
         return count;
     }
 
-    // this method takes in a string and returns a Dictionary that contains all unique words and the number of times they appear from the string
+    // This method takes in a string and returns a Dictionary that contains all unique words and the number of times they appear 
     public Dictionary<string, int> UniqueWords(string paragragh)
     {
         if (string.IsNullOrEmpty(paragragh)) return new Dictionary<string, int>();
@@ -72,7 +72,7 @@ class Solution
         return dictionary;
     }
 
-    // this method takes in a string and char, and returns a list of words that contained the char parameter
+    // This method takes in a string and char, and returns a list of words that contained the char parameter
     public List<string> WordsContainingChar(string paragragh, char character)
     {
         if (string.IsNullOrEmpty(paragragh)) return new List<string>();
@@ -81,7 +81,7 @@ class Solution
         List<string> trimmedWords = TrimWords(paragragh);
 
         foreach (string word in trimmedWords)
-            // check to see if character in contained in either uppercase or lowercase strings
+            // check to see if character is contained in either uppercase or lowercase strings
             if (word.ToLower().Contains(character) || word.ToUpper().Contains(character)) list.Add(word);
 
         return list;
@@ -133,7 +133,7 @@ class Solution
     }
 
     /* 
-    this method takes in a string and returns a list of trimmed words. These trimmed words only contain alphabetic characters. Any special
+    This method takes in a string and returns a list of trimmed words. These trimmed words only contain alphabetic characters. Any special
     or numeral characters are removed from the original words.
     */
     private List<string> TrimWords(string str)
