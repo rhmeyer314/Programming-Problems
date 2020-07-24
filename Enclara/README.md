@@ -3,7 +3,7 @@
 
 ### To solve this, four different methods were created to solve each individual problem. Another method, GetInputAndPrint() is created, which prompts the user for input and displays the correct solution for each of the four problems based on that input. Below each of the four methods are detailed on what they accomplish.
 
-### **int NumberOfPalindromes(string paragraph)**
+### **int** NumberOfPalindromes(string paragraph)**
 #### This method solves the problem for the number of palindrome words in a paragraph. This method takes in a string as an argument and returns a count of the number of palindrome words in the paragraph.
 
 ### **int NumberOfPalindromeSentences(string paragraph)**
