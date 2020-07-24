@@ -1,16 +1,18 @@
 ## Problem: Using VS Code, write a C# solution to take in an input of a paragraph and: Give the number of palindrome words, Give the number of palindrome sentences, List the unique words of a paragraph with the count of the word instance, Let the user also input a letter at some point and list all words containing that letter
 
 
-### To solve this, I created four different methods to solve each individual problem. I also created another method that prompts the user for input, and displays the correct solution for each of the four problems based on that input. Below I have detailed how each of the four methods solves their respective problems.
+### To solve this, four different methods were created to solve each individual problem. Another method, GetInputAndPrint() is created, which prompts the user for input and displays the correct solution for each of the four problems based on that input. Below each of the four methods are detailed on what they accomplish.
 
-### NumberOfPalindromes(string paragraph)
-#### This method solves the problem for the number of palindrome words in a paragraph. Special and numeric characters were not considered words and were removed from each word in the string. The variable, count, is used to count the number of palindrome words. Using a helper method, TrimWords(string str), a List of words only alphabetic characters is created. Each word in the list is checked to be a palindrome using the IsPalindrome(string word) method. If the word is a palindrome, then increment the count. If not, then move to the next iteration. Once the loop breaks, return the count.
+### int NumberOfPalindromes(string paragraph)
+#### This method solves the problem for the number of palindrome words in a paragraph. This method takes in a string as an argument and returns a count of the number of palindrome words in the paragraph.
 
-### NumberOfPalindromeSentences(string paragraph)
-#### This method solves the problem for the number of palindrome sentences in a paragraph. The paragraph string was split on sentence ending punctuation. This includes '.', '!', and '?'. The variable, count, is used to count the number of palindrome sentences. An array is created which stores each sentence. This array is looped through, and each sentence is stripped of special and numeric characters. The trimmed down sentence is then determined to be a palindrome or not. If so, then count is incremented. If not then move to the next iteration. Once the loop breaks, the count is returned.
+### int NumberOfPalindromeSentences(string paragraph)
+#### This method solves the problem for the number of palindrome sentences in a paragraph. This method takes in a string as an argument and returns a count of the number of palindrome sentences in the paragraph.
 
-### UniqueWords(string paragraph)
-#### This method solves the problem to list the unique words with the count of the word instance. To match words with a count of their appearances in the paragraph, a Dictionary<string, int> object was created, where the words are the keys and their appearances are the values. All words were lowercased, since matching words with the same characters, but different case-sensitivity. A list was created of all trimmed words, and these words were looped through. If a word was not contained in the dictionary, a new entry was created with the word being the key and the value being set to 1. If the word was in the dictionary, then increment the key's value by 1. Once the loop breaks, return the dictionary.
+### Dictionary<string, int> UniqueWords(string paragraph)
+#### This method solves the problem to list the unique words with the count of the word instance. This method takes in a string as an argument and returns a dictionary object where the words are the keys and the number of appearances for each word is the value.
 
 ### WordsContainingChar(string paragragh, char character)
-#### This method solves the problem to list all words that contain a letter. An empty list is created, which will be modified and returned at the end of the method. Another list is created containing the trimmed words from the paragraph. These words are looped through, and if the input character is contained in either the uppercase or lowercase versions of the current word, then the word is added to the output list. Otherwise, the loop moves to the next iteration. When the loop breaks, the output list is returned.
+#### This method solves the problem to list all words that contain a letter. This method takes in a string and a character as arguments and returns a list of all words in the string that contain the provided character.
+
+### Note: Only strings that only contained alphabetic characters were considered words. All special and numeric characters were removed from each word in the paragraph so that. 
