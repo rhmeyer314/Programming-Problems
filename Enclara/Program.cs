@@ -15,12 +15,12 @@ class Solution
 
 {
     // This method takes in a string and returns a count of how many palindrome words were in this string
-    public int NumberOfPalindromes(string paragragh)
+    public int NumberOfPalindromes(string paragraph)
     {
-        if (paragragh == null) return 0;
+        if (paragraph == null) return 0;
 
         int count = 0;
-        List<string> trimmedWords = TrimWords(paragragh);
+        List<string> trimmedWords = TrimWords(paragraph);
 
         foreach (string word in trimmedWords)
         {
@@ -31,14 +31,14 @@ class Solution
     }
 
     // This method takes in a string and returns a count of how many sentences are a palindrome
-    public int NumberOfPalindromeSentences(string paragragh)
+    public int NumberOfPalindromeSentences(string paragraph)
     {
-        if (string.IsNullOrEmpty(paragragh)) return 0;
+        if (string.IsNullOrEmpty(paragraph)) return 0;
 
         int count = 0;
         char[] specialCases = { '.', '!', '?' }; // punctuation that ends sentences
 
-        string[] sentences = paragragh.Split(specialCases, StringSplitOptions.RemoveEmptyEntries);
+        string[] sentences = paragraph.Split(specialCases, StringSplitOptions.RemoveEmptyEntries);
 
         foreach (string sentence in sentences)
         {
@@ -54,14 +54,14 @@ class Solution
     }
 
     // This method takes in a string and returns a Dictionary that contains all unique words and the number of times they appear 
-    public Dictionary<string, int> UniqueWords(string paragragh)
+    public Dictionary<string, int> UniqueWords(string paragraph)
     {
-        if (string.IsNullOrEmpty(paragragh)) return new Dictionary<string, int>();
+        if (string.IsNullOrEmpty(paragraph)) return new Dictionary<string, int>();
 
         Dictionary<string, int> dictionary = new Dictionary<string, int>();
 
         // lowercase all trimmed words in order to see how many different times a word repeats, regardless of cases
-        List<string> trimmedWords = TrimWords(paragragh.ToLower());
+        List<string> trimmedWords = TrimWords(paragraph.ToLower());
 
         foreach (string word in trimmedWords)
         {
@@ -73,12 +73,12 @@ class Solution
     }
 
     // This method takes in a string and char, and returns a list of words that contained the char parameter
-    public List<string> WordsContainingChar(string paragragh, char character)
+    public List<string> WordsContainingChar(string paragraph, char character)
     {
-        if (string.IsNullOrEmpty(paragragh)) return new List<string>();
+        if (string.IsNullOrEmpty(paragraph)) return new List<string>();
 
         List<string> list = new List<string>();
-        List<string> trimmedWords = TrimWords(paragragh);
+        List<string> trimmedWords = TrimWords(paragraph);
 
         foreach (string word in trimmedWords)
             // check to see if character is contained in either uppercase or lowercase strings
