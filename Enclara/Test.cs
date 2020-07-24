@@ -297,4 +297,13 @@ public class Test
         List<string> actual = solution.WordsContainingChar(input, 'w');
         Assert.Equal(expected, actual);
     }
+
+    [Fact]
+    public void emptyCharacterTest()
+    {
+        string input = "This is a sentence";
+        List<string> expected = new List<string>();
+        List<string> actual = solution.WordsContainingChar(input, '\0');
+        Assert.Equal(expected, actual);
+    }
 }
