@@ -17,4 +17,4 @@
 
 ### Note: Only strings that contained only alphabetic characters were considered words. Special and numeric characters are not considered words. All special and numeric characters were removed from each word. 
 
-### Solution found in Program.cs file
+### Solution found in Program.cs file.
