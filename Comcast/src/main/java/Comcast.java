@@ -40,7 +40,6 @@ public class Comcast {
 
         // remove space at the end of the builder
         builder.replace(builder.length() - 1, builder.length(), "");
-
         return builder.toString();
     }
 }
