@@ -15,4 +15,4 @@
 ### **List<string> WordsContainingChar(string paragragh, char character)**
 #### This method solves the problem to list all words that contain a letter. This method takes in a string and a character as arguments and returns a list of all words in the string that contain the provided character.
 
-### Note: Only strings that only contained alphabetic characters were considered words. All special and numeric characters were removed from each word in the paragraph so that. 
+### Note: Only strings that contained only alphabetic characters were considered words. All special and numeric characters were removed from each word in the paragraph so that. 
