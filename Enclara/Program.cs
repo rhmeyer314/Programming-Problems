@@ -17,7 +17,7 @@ class Solution
     // This method takes in a string and returns a count of how many palindrome words were in this string
     public int NumberOfPalindromes(string paragraph)
     {
-        if (paragraph == null) return 0;
+        if (string.IsNullOrEmpty(paragraph)) return 0;
 
         int count = 0;
         List<string> trimmedWords = TrimWords(paragraph);
