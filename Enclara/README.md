@@ -3,16 +3,16 @@
 
 ### To solve this, four different methods were created to solve each individual problem. Another method, GetInputAndPrint() is created, which prompts the user for input and displays the correct solution for each of the four problems based on that input. Below each of the four methods are detailed on what they accomplish.
 
-### int NumberOfPalindromes(string paragraph)
+#### int NumberOfPalindromes(string paragraph)
 #### This method solves the problem for the number of palindrome words in a paragraph. This method takes in a string as an argument and returns a count of the number of palindrome words in the paragraph.
 
-### int NumberOfPalindromeSentences(string paragraph)
+#### int NumberOfPalindromeSentences(string paragraph)
 #### This method solves the problem for the number of palindrome sentences in a paragraph. This method takes in a string as an argument and returns a count of the number of palindrome sentences in the paragraph.
 
-### Dictionary<string, int> UniqueWords(string paragraph)
+#### Dictionary<string, int> UniqueWords(string paragraph)
 #### This method solves the problem to list the unique words with the count of the word instance. This method takes in a string as an argument and returns a dictionary object where the words are the keys and the number of appearances for each word is the value.
 
-### WordsContainingChar(string paragragh, char character)
+#### WordsContainingChar(string paragragh, char character)
 #### This method solves the problem to list all words that contain a letter. This method takes in a string and a character as arguments and returns a list of all words in the string that contain the provided character.
 
 ### Note: Only strings that only contained alphabetic characters were considered words. All special and numeric characters were removed from each word in the paragraph so that. 
